@@ -1,4 +1,4 @@
-FROM nixos/nix:2.31.2
+FROM nixos/nix:latest
 RUN mkdir -p /opt /workspace /home/agent /cache /opt/yazi/python \
  && echo 'experimental-features = nix-command flakes' >> /etc/nix/nix.conf \
  && nix-env -iA nixpkgs.python312 nixpkgs.bashInteractive nixpkgs.coreutils nixpkgs.gnutar nixpkgs.findutils nixpkgs.gnugrep nixpkgs.gnused nixpkgs.gitMinimal nixpkgs.cacert \
